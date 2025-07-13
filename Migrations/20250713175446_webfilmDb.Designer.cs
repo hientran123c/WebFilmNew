@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Film_website.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250628155202_webfilmDb")]
+    [Migration("20250713175446_webfilmDb")]
     partial class webfilmDb
     {
         /// <inheritdoc />
@@ -32,6 +32,10 @@ namespace Film_website.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Categories")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");

@@ -70,6 +70,7 @@ namespace Film_website.Migrations
                     FilePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ThumbnailPath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubtitlePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Categories = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
